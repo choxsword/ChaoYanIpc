@@ -67,8 +67,7 @@ namespace ChaoYanIpc
             SD = new ScrewData();
             Thread_InputData = new Thread(InputData);
             InitialSettings();
-            Application.DoEvents();
-            Btn_StartMonitor_Click(null, null);
+            //Application.DoEvents();
         }
 
         private void ShowSqlButton()
@@ -497,6 +496,7 @@ namespace ChaoYanIpc
             {
                 if (strRNum == softReg.GetRNum())
                 {
+                    Btn_StartMonitor_Click(null, null);
                     return;
                 }
             }
